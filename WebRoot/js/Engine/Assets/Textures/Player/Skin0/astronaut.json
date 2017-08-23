@@ -1,0 +1,100 @@
+{"frames": {
+
+"astronautStill_0.png":
+{
+	"frame": {"x":1,"y":610,"w":87,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":0,"w":87,"h":65},
+	"sourceSize": {"w":96,"h":65}
+},
+"astronautMoving_0.png":
+{
+	"frame": {"x":1,"y":69,"w":95,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":95,"h":65},
+	"sourceSize": {"w":96,"h":65}
+},
+"astronaut_2.png":
+{
+	"frame": {"x":1,"y":136,"w":94,"h":67},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":94,"h":67},
+	"sourceSize": {"w":95,"h":67}
+},
+"astronaut_3.png":
+{
+	"frame": {"x":1,"y":205,"w":92,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":92,"h":66},
+	"sourceSize": {"w":96,"h":66}
+},
+"astronautStillFire_0.png":
+{
+	"frame": {"x":1,"y":542,"w":87,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":0,"w":87,"h":66},
+	"sourceSize": {"w":96,"h":66}
+},
+"astronautMovingFire_0.png":
+{
+	"frame": {"x":1,"y":273,"w":92,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":92,"h":66},
+	"sourceSize": {"w":96,"h":66}
+},
+"astronaut_6.png":
+{
+	"frame": {"x":1,"y":1,"w":95,"h":66},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":95,"h":66},
+	"sourceSize": {"w":97,"h":66}
+},
+"astronaut_7.png":
+{
+	"frame": {"x":1,"y":408,"w":92,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":0,"w":92,"h":65},
+	"sourceSize": {"w":97,"h":65}
+},
+"astronaut_8.png":
+{
+	"frame": {"x":1,"y":475,"w":92,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":0,"w":92,"h":65},
+	"sourceSize": {"w":97,"h":65}
+},
+"astronautStillFire_1.png":
+{
+	"frame": {"x":1,"y":677,"w":86,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":0,"w":86,"h":65},
+	"sourceSize": {"w":96,"h":65}
+},
+"astronautMovingFire_1.png":
+{
+	"frame": {"x":1,"y":341,"w":92,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":0,"w":92,"h":65},
+	"sourceSize": {"w":97,"h":65}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "astronaut.png",
+	"format": "RGBA8888",
+	"size": {"w":97,"h":743},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:6c2e1cf07d7eba82a4aaabc6be0f28e0:400d93f565d5070562a933a5e1004d53:b3397da60cbf4bb23c2f8a459ae2c8dd$"
+}
+}
