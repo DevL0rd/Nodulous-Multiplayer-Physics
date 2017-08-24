@@ -1,7 +1,7 @@
 var fs = require('fs');
-var DB = require('./Devlord_modules/DB.js');
-var Logging = require('./Devlord_modules/Logging.js');
-Logging.setDebug(false)
+var DB = require('../Devlord_modules/DB.js');
+var Logging = require('../Devlord_modules/Logging.js');
+Logging.setConsoleLogging(false)
 var IO
 function load(str) {
 	var contents = fs.readFileSync(str).toString();
@@ -10,7 +10,7 @@ function load(str) {
 
 //Load DBS
 if (fs.existsSync("./Engine.json")) {
-    var settings = DB.load("Engine")
+    var settings = DB.load("./Engine.json")
 } else {
 	var settings = {
 		MaxConnectionCount: -1

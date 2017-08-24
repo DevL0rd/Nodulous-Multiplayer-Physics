@@ -1,13 +1,15 @@
-//Devlord Base Client
-//Version: 1.0
-//Dustin Harris
+//Authour: DevL0rd
+//GitHub: https://github.com/DevL0rd
+//Last Update: 8/22/2017
+//Version: 1
+
 //Include Libs
 var url = require('url');
 var os = require('os');
 var fs = require('fs');
 var http = require('http');
 var crypto = require('crypto');
-var Engine = require('./Engine.js');
+var Engine = require('./Engine');
 var DB = require('./Devlord_modules/DB.js');
 
 //
@@ -15,21 +17,20 @@ var DB = require('./Devlord_modules/DB.js');
 //
 var Logging = require('./Devlord_modules/Logging.js');
 Logging.setNamespace('Console')
-Logging.setDebug(false)
-var SimplePerfMon = require('./Devlord_modules/SimplePerfMon.js')
+Logging.setConsoleLogging(false)
 
 //Startup
 Logging.log("Starting Up...");
 //Load DBS
 if (fs.existsSync("./Server.json")) {
-    var settings = DB.load("Server")
+    var settings = DB.load("./Server.json")
 } else {
-	var settings = {
-		IP: "0.0.0.0",
-		PORT: 80,
-		HTTP_TIMEOUT_MS: 5000 
-	}
-	DB.save("Server", settings)
+    var settings = {
+        IP: "0.0.0.0",
+        PORT: 80,
+        HTTP_TIMEOUT_MS: 5000
+    }
+    DB.save("Server", settings)
 }
 
 var server = http.createServer(Http_Handler)
@@ -38,8 +39,8 @@ server.timeout = settings.HTTP_TIMEOUT_MS;
 //startServer
 Logging.log("Starting server at '" + settings.IP + ":" + settings.PORT + "'...", false, "HTTP");
 server.listen(settings.PORT, settings.IP);
-io.generate_key = function () {
-	var sha = crypto.createHash('sha256');
+io.generate_key = function() {
+    var sha = crypto.createHash('sha256');
     sha.update(Math.random().toString());
     return sha.digest('hex');
 }
@@ -97,6 +98,13 @@ function Http_Handler(request, response) {
                     'Accept-Ranges': 'bytes'
                 });
                 response.end(data, 'binary');
+            } else if (extension == "gif") {
+                response.writeHead(200, {
+                    'Content-Type': 'image/gif',
+                    'Content-Length': data.length,
+                    'Accept-Ranges': 'bytes'
+                });
+                response.end(data, 'binary');
             } else if (extension == "mp3") {
                 response.writeHead(200, {
                     'Content-Type': 'audio/mp3',
@@ -119,6 +127,14 @@ function Http_Handler(request, response) {
                     'Cache-Control': 'no-cache'
                 });
                 response.end(data);
+            } else if (extension == "ttf") {
+                response.writeHead(200, {
+                    'Content-Type': 'application/octet-stream',
+                    'Content-Length': data.length,
+                    'Accept-Ranges': 'bytes',
+                    'Cache-Control': 'no-cache'
+                });
+                response.end(data, 'binary');
             }
         });
     } else {
