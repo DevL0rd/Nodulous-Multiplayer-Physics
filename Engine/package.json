@@ -1,6 +1,6 @@
 {
-  "name": "TwitchBot",
-  "description": "A twitch bot by dmhzmxn",
+  "name": "Blank Devlord WebApp",
+  "description": "",
   "version": "0.0.1",
   "repository": {
     "type": "git",
@@ -8,8 +8,6 @@
   },
   "main": "./index.js",
   "directories": {
-    "DB": "./DB",
-    "Plugins": "./Plugins"
   },
   "engines": {
     "node": ">=0.4.0"
